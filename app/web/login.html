@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in · ProcurePilot</title>
+  <meta name="description" content="ProcurePilot secure sign in" />
+  <link rel="stylesheet" href="/static/css/app.css?v=20260915-ui2" />
+</head>
+<body class="login-page">
+  <main class="login-layout">
+    <section class="login-brand-panel" aria-label="ProcurePilot introduction">
+      <div class="brand brand--large">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span><strong>ProcurePilot</strong> </span>
+      </div>
+      <div class="login-brand-copy">
+        <span class="eyebrow">CONTROLLED PROCUREMENT OPERATIONS</span>
+        <h1>From request to payment readiness — with people in control.</h1>
+        <p>One secure platform for employees, managers, procurement, AP, finance, receiving, and administration.</p>
+      </div>
+      <div class="login-flow" aria-label="Procure to pay stages">
+        <span>Request</span><b>→</b><span>Source / RFQ</span><b>→</b><span>Select</span><b>→</b><span>Approve</span><b>→</b><span>Order</span><b>→</b><span>Receive</span><b>→</b><span>Invoice</span><b>→</b><span>3-Way Match</span><b>→</b><span>Finance</span>
+      </div>
+      <div class="login-proof-grid">
+        <article><strong>Role-aware</strong><span>Workspaces adapt to the signed-in user.</span></article>
+        <article><strong>Auditable</strong><span>Human and system actions stay traceable.</span></article>
+        <article><strong>Policy-controlled</strong><span>Financial rules remain deterministic.</span></article>
+      </div>
+    </section>
+
+    <section class="login-form-panel">
+      <div class="login-card">
+        <div class="login-mobile-brand brand">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span><strong>ProcurePilot</strong> </span>
+        </div>
+        <span class="eyebrow">SECURE ACCESS</span>
+        <h2>Welcome back</h2>
+        <p class="muted">Sign in with your ProcurePilot account. Your role determines the workspace you see.</p>
+
+        <form id="login-form" novalidate>
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" autocomplete="username" placeholder="you@company.com" required />
+
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+            <button class="text-button" id="toggle-password" type="button" aria-label="Show password">Show</button>
+          </div>
+
+          <div id="login-error" class="form-error" role="alert" hidden></div>
+          <button id="login-button" class="button button--primary button--wide" type="submit">Sign in to ProcurePilot</button>
+        </form>
+
+        <div class="login-security-note">
+          <span class="status-dot status-dot--green"></span>
+          JWT authentication · Database-backed RBAC · Audited login events
+        </div>
+      </div>
+      <p class="login-footer">ProcurePilot · Secure enterprise procurement operations</p>
+    </section>
+  </main>
+  <script src="/static/js/login.js?v=20260915-ui2" defer></script>
+</body>
+</html>
